@@ -30,14 +30,14 @@ function NavBar() {
 
   return (
     <header
-      className="fixed left-0 top-0 h-14 w-full py-4 shadow-lg"
+      className="fixed left-0 top-0 h-14 w-full py-4 shadow-lg backdrop-blur-2xl"
       ref={navRef}
     >
       <nav className="container hidden items-center justify-between md:flex">
         <img
           src={theme === "dark" ? darkLogo : lightLogo}
           alt="Omnifood-Logo"
-          className="h-7"
+          className="h-6"
         />
 
         <ul className="nav-links flex items-center gap-4 text-lg font-bold dark:text-white">

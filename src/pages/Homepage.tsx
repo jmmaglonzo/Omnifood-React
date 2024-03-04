@@ -9,8 +9,8 @@ function Homepage() {
       <ThemeProvider>
         <NavBar />
         <Hero />
+        <Logos />
       </ThemeProvider>
-      <Logos />
       <main className="container"></main>
     </>
   );
