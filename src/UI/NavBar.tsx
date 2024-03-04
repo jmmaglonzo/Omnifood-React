@@ -40,21 +40,21 @@ function NavBar() {
           className="h-6"
         />
 
-        <ul className="nav-links flex items-center gap-4 text-lg font-bold dark:text-white">
+        <ul className="nav-links flex items-center gap-4 text-lg font-bold dark:text-white ">
           <li>
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">How it works</a>
+            <a href="#how">How it works</a>
           </li>
           <li className="">
-            <a href="#">Meals</a>
+            <a href="#meals">Meals</a>
           </li>
           <li>
-            <a href="#">Gallery</a>
+            <a href="#gallery">Gallery</a>
           </li>
           <li>
-            <a href="#">Contact Us!</a>
+            <a href="#cta">Contact Us!</a>
           </li>
         </ul>
 
@@ -70,24 +70,24 @@ function NavBar() {
           className="h-7"
         />
         <ul
-          className={`absolute left-0 top-14 flex w-full flex-col items-center gap-4 p-8 font-bold backdrop-blur-lg duration-300 dark:text-white ${
-            menu ? "translate-y-0" : "-translate-y-72"
+          className={`absolute left-0 top-14 flex w-full flex-col items-center gap-4 p-8 text-lg font-bold backdrop-blur-lg duration-300 dark:text-white ${
+            menu ? "translate-y-0" : "-translate-y-80"
           } `}
         >
           <li>
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">How it works</a>
+            <a href="#how">How it works</a>
           </li>
           <li className="">
-            <a href="#">Meals</a>
+            <a href="#meals">Meals</a>
           </li>
           <li>
-            <a href="#">Gallery</a>
+            <a href="#gallery">Gallery</a>
           </li>
           <li>
-            <a href="#">Contact Us!</a>
+            <a href="#cta">Contact Us!</a>
           </li>
         </ul>
         <div className="flex items-center gap-4">
