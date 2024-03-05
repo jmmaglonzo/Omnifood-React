@@ -6,8 +6,8 @@ interface ThemeProps {
 }
 function ThemeProvider({ children }: ThemeProps) {
   const savedTheme = localStorage.getItem("theme");
-  const [theme, setTheme] = useState(savedTheme || null);
-  const [debouncedTheme, setDebouncedTheme] = useState(theme);
+  const [theme, setTheme] = useState<string | null>(savedTheme || null);
+  const [debouncedTheme, setDebouncedTheme] = useState<string | null>(theme);
   useEffect(() => {
     const prefersDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)",

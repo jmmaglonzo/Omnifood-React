@@ -2,6 +2,7 @@ import NavBar from "../UI/NavBar";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import Logos from "../components/Logos";
+import Meals from "../components/Meals";
 import ThemeProvider from "../context/ThemeProvider";
 
 function Homepage() {
@@ -14,6 +15,7 @@ function Homepage() {
       </ThemeProvider>
       <main className="container">
         <HowItWorks />
+        <Meals />
       </main>
     </>
   );
