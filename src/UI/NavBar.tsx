@@ -30,17 +30,17 @@ function NavBar() {
 
   return (
     <header
-      className="fixed left-0 top-0 h-14 w-full py-4 shadow-lg backdrop-blur-2xl"
+      className="fixed left-0 top-0 h-14 w-full bg-light py-4  shadow-lg dark:bg-backgroundColor "
       ref={navRef}
     >
       <nav className="container hidden items-center justify-between md:flex">
         <img
           src={theme === "dark" ? darkLogo : lightLogo}
           alt="Omnifood-Logo"
-          className="h-6"
+          className="h-5 lg:h-6"
         />
 
-        <ul className="nav-links flex items-center gap-4 text-lg font-bold dark:text-white ">
+        <ul className="nav-links flex items-center gap-4 text-sm font-bold dark:text-white lg:text-base ">
           <li>
             <a href="#">Home</a>
           </li>
@@ -63,15 +63,15 @@ function NavBar() {
 
       {/* Mobile Nav */}
 
-      <nav className="flex justify-between px-8 md:hidden">
+      <nav className="flex items-center justify-between px-8 md:hidden">
         <img
           src={theme === "dark" ? darkLogo : lightLogo}
           alt="Omnifood-Logo"
-          className="h-7"
+          className="h-4 "
         />
         <ul
-          className={`absolute left-0 top-14 flex w-full flex-col items-center gap-4 p-8 text-lg font-bold backdrop-blur-lg duration-300 dark:text-white ${
-            menu ? "translate-y-0" : "-translate-y-80"
+          className={`absolute left-0 top-12 flex w-full flex-col items-center gap-4 p-8 text-lg font-bold backdrop-blur-xl  duration-300 dark:text-white ${
+            menu ? "translate-y-0" : "-translate-y-96"
           } `}
         >
           <li>

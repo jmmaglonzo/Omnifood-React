@@ -5,21 +5,25 @@ function Hero() {
   return (
     <>
       <section className=" container flex items-center gap-8 py-28">
-        <article className="flex flex-col space-y-4 md:items-start">
-          <h1 className=" text-center text-3xl font-bold text-primaryColor dark:text-secondaryColor lg:text-start lg:text-3xl xl:text-5xl">
+        <article className="flex flex-col items-center space-y-4 lg:items-start">
+          <h1 className="text-center text-lg font-bold text-primaryColor dark:text-secondaryColor md:text-3xl lg:text-start xl:text-4xl">
             A healthy meal delivered to your door, every single day!
           </h1>
-          <p className="text-center text-base leading-relaxed dark:text-white md:text-lg lg:text-start">
+          <p className="text-center text-sm leading-relaxed dark:text-white md:text-lg lg:text-start">
             The smart 365-days-per-year food subscription that will make you eat
             healthy again. Tailored to your personal tastes and nutritional
             needs.
           </p>
 
           <div className="mx-auto  flex gap-4 lg:mx-0">
-            <Button color={`dark:bg-secondaryColor bg-primaryColor text-white`}>
+            <Button
+              color={`dark:bg-secondaryColor bg-primaryColor text-white text-xs md:text-base`}
+            >
               Start eating well!
             </Button>
-            <Button color={`bg-white dark:text-black`}>Learn more!</Button>
+            <Button color={`bg-white dark:text-black text-xs md:text-base`}>
+              Learn more!
+            </Button>
           </div>
         </article>
 

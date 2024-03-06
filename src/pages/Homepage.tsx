@@ -7,7 +7,7 @@ import ThemeProvider from "../context/ThemeProvider";
 
 function Homepage() {
   return (
-    <>
+    <div className="dark:backgroundColor min-h-screen bg-light dark:bg-backgroundColor">
       <ThemeProvider>
         <NavBar />
         <Hero />
@@ -17,7 +17,7 @@ function Homepage() {
         <HowItWorks />
         <Meals />
       </main>
-    </>
+    </div>
   );
 }
 

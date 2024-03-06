@@ -14,8 +14,8 @@ function DarkModeToggle() {
           className="peer sr-only"
           onChange={handleTheme}
         />
-        <div className="peer relative h-5 w-9 cursor-pointer rounded-full bg-backgroundColor after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-gray-600 dark:bg-gray-700"></div>
-        <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+        <div className="peer relative h-4 w-7 cursor-pointer rounded-full bg-backgroundColor after:absolute after:left-[0px] after:top-[0px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:border-gray-600 dark:bg-gray-700 md:h-5 md:w-9 md:after:left-[2px] md:after:top-[2px]"></div>
+        <span className="ms-3 text-sm font-medium text-gray-900  dark:text-gray-300">
           {theme === "light" ? (
             <PiMoonStarsFill className="text-2xl" />
           ) : (

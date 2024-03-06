@@ -1,10 +1,14 @@
 import Homepage from "./pages/Homepage";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div className="dark:backgroundColor min-h-screen bg-light dark:bg-backgroundColor">
-      <Homepage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
