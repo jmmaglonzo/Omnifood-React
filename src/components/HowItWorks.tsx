@@ -27,7 +27,7 @@ function HowItWorks() {
             </p>
           </article>
           <figure className="order-1 w-1/2 md:order-2 md:w-auto">
-            <img src={app1} alt="" width={300} />
+            <img src={app1} alt="" className="w-44 lg:w-72" />
           </figure>
         </div>
         {/*  */}
@@ -46,7 +46,7 @@ function HowItWorks() {
             </p>
           </article>
           <figure className="order-1 w-1/2 md:order-1 md:w-auto">
-            <img src={app2} alt="" width={300} />
+            <img src={app2} alt="" className="w-44 lg:w-72" />
           </figure>
         </div>
         {/*  */}
@@ -65,7 +65,7 @@ function HowItWorks() {
             </p>
           </article>
           <figure className="order-1 w-1/2 md:order-2 md:w-auto">
-            <img src={app3} alt="" width={300} />
+            <img src={app3} alt="" className="w-44 lg:w-72" />
           </figure>
         </div>
       </div>

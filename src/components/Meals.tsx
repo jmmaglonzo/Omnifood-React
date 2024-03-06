@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cards from "../UI/Cards";
-
+import { useMediaQuery } from "react-responsive";
 export type MealProps = {
   id: number;
   image: string;
@@ -13,7 +13,6 @@ export type MealProps = {
 function Meals() {
   const [recipes, setRecipes] = useState<MealProps[]>([]);
   useEffect(() => {
-    // Check if data exists in local storage
     const storedRecipes = localStorage.getItem("recipes");
     if (storedRecipes) {
       setRecipes(JSON.parse(storedRecipes));
@@ -24,7 +23,6 @@ function Meals() {
           const response = await fetch(url);
           const data = await response.json();
           setRecipes(data.recipes);
-          // Store fetched data in local storage
           localStorage.setItem("recipes", JSON.stringify(data.recipes));
         } catch (error) {
           console.error("Error fetching recipes:", error);
@@ -35,13 +33,17 @@ function Meals() {
   }, []);
 
   console.log(recipes);
+
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
+  const visibleCards = isMobile ? recipes.slice(0, 4) : recipes.slice(0, 12);
   return (
     <section className="mt-24 space-y-4" id="meals">
-      <h3 className=" text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
+      <h3 className="text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
         meals
       </h3>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {recipes.map((recipe) => (
+        {visibleCards.map((recipe) => (
           <Cards key={recipe.id} data={recipe} />
         ))}
       </div>
