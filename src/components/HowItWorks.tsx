@@ -3,7 +3,7 @@ import app2 from "../assets/app/app-screen-2.webp";
 import app3 from "../assets/app/app-screen-3.webp";
 function HowItWorks() {
   return (
-    <section className="mt-20 space-y-4 " id="how">
+    <section className="mt-20 space-y-4 py-20 " id="how">
       <span className=" text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-start md:text-xl">
         how it works
       </span>

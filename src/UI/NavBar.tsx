@@ -51,7 +51,7 @@ function NavBar() {
             <a href="#meals">Meals</a>
           </li>
           <li>
-            <a href="#gallery">Gallery</a>
+            <a href="#gallery">Testimonials</a>
           </li>
           <li>
             <a href="#cta">Contact Us!</a>
@@ -84,7 +84,7 @@ function NavBar() {
             <a href="#meals">Meals</a>
           </li>
           <li>
-            <a href="#gallery">Gallery</a>
+            <a href="#gallery">Testimonials</a>
           </li>
           <li>
             <a href="#cta">Contact Us!</a>
