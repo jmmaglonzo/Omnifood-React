@@ -32,16 +32,14 @@ function Meals() {
     }
   }, []);
 
-  console.log(recipes);
-
   const isMobile = useMediaQuery({ maxWidth: 640 });
 
   const visibleCards = isMobile ? recipes.slice(0, 4) : recipes.slice(0, 12);
   return (
-    <section className="mt-24 space-y-4" id="meals">
-      <h3 className="text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
+    <section className="mt-24 space-y-4 text-center" id="meals">
+      <span className=" text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
         meals
-      </h3>
+      </span>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {visibleCards.map((recipe) => (
           <Cards key={recipe.id} data={recipe} />

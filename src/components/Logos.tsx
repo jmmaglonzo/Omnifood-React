@@ -15,10 +15,10 @@ function Logos() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section className="mt-20 w-full bg-primaryColor p-8 dark:bg-accent">
-      <h3 className="text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
+    <section className="mt-20 w-full bg-primaryColor p-8 text-center dark:bg-accent ">
+      <span className="text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
         featured in
-      </h3>
+      </span>
 
       <figure className="mx-auto mt-8 flex w-1/2 flex-wrap items-center justify-center gap-8">
         <img

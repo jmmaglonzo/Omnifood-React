@@ -20,7 +20,6 @@ function Cards({ data }: CardsProps) {
   }
   const { diets, image, title, pricePerServing, readyInMinutes, servings } =
     data;
-
   return (
     <div className="flex flex-col overflow-hidden rounded-xl bg-cards shadow-lg dark:bg-accent">
       <header>

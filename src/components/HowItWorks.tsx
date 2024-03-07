@@ -4,9 +4,9 @@ import app3 from "../assets/app/app-screen-3.webp";
 function HowItWorks() {
   return (
     <section className="mt-20 space-y-4 " id="how">
-      <h3 className=" text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-start md:text-xl">
+      <span className=" text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-start md:text-xl">
         how it works
-      </h3>
+      </span>
       <h2 className="text-center font-bold dark:text-white md:text-start md:text-4xl">
         Your daily dose of health in 3 simple steps!
       </h2>
