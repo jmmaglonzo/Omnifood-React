@@ -45,7 +45,7 @@ function OmniFooter() {
           <li className="cursor-pointer md:hover:underline">Privacy & Terms</li>
         </ul>
       </div>
-      <span className=" fixed bottom-0 left-0 w-full bg-primaryColor p-1 text-center font-bold dark:bg-accent dark:text-white ">
+      <span className=" fixed bottom-0 left-0 w-full bg-primaryColor p-1 text-center font-bold text-white dark:bg-accent ">
         <p>Concept from Omnifood Project</p>
       </span>
     </footer>
