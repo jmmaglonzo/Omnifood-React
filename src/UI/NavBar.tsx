@@ -9,6 +9,7 @@ function NavBar() {
   const { theme } = useContext(ThemeContext);
   const [menu, setMenu] = useState<boolean>(false);
   const navRef = useRef<HTMLHeadingElement>(null);
+  const [scrollTarget, setScrollTarget] = useState<null | string>(null);
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -28,9 +29,23 @@ function NavBar() {
     setMenu((m) => !m);
   };
 
+  useEffect(() => {
+    if (scrollTarget) {
+      const section = document.getElementById(scrollTarget);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      setScrollTarget(null);
+    }
+  }, [scrollTarget]);
+
+  const handleClick = (id: string): void => {
+    setScrollTarget(id);
+  };
+
   return (
     <header
-      className="fixed left-0 top-0 h-14 w-full bg-light py-4  shadow-lg dark:bg-backgroundColor "
+      className="fixed left-0 top-0 z-50 h-14 w-full bg-light py-4  shadow-lg dark:bg-backgroundColor "
       ref={navRef}
     >
       <nav className="container hidden items-center justify-between md:flex">
@@ -42,19 +57,44 @@ function NavBar() {
 
         <ul className="nav-links flex items-center gap-4 text-sm font-bold dark:text-white lg:text-base ">
           <li>
-            <a href="#">Home</a>
+            <button
+              onClick={() => handleClick("hero")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Home
+            </button>
           </li>
           <li>
-            <a href="#how">How it works</a>
+            <button
+              onClick={() => handleClick("how")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              How it works
+            </button>
           </li>
           <li className="">
-            <a href="#meals">Meals</a>
+            <button
+              onClick={() => handleClick("meals")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Meals
+            </button>
           </li>
           <li>
-            <a href="#gallery">Testimonials</a>
+            <button
+              onClick={() => handleClick("testimonials")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Testimonials
+            </button>
           </li>
           <li>
-            <a href="#cta">Contact Us!</a>
+            <button
+              onClick={() => handleClick("contact")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Contact Us!
+            </button>
           </li>
         </ul>
 
@@ -75,19 +115,44 @@ function NavBar() {
           } `}
         >
           <li>
-            <a href="#">Home</a>
+            <button
+              onClick={() => handleClick("hero")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Home
+            </button>
           </li>
           <li>
-            <a href="#how">How it works</a>
+            <button
+              onClick={() => handleClick("how")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              How it works
+            </button>
           </li>
           <li className="">
-            <a href="#meals">Meals</a>
+            <button
+              onClick={() => handleClick("meals")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Meals
+            </button>
           </li>
           <li>
-            <a href="#gallery">Testimonials</a>
+            <button
+              onClick={() => handleClick("testimonials")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Testimonials
+            </button>
           </li>
           <li>
-            <a href="#cta">Contact Us!</a>
+            <button
+              onClick={() => handleClick("contact")}
+              className="focus:text-primaryColor dark:focus:text-secondaryColor"
+            >
+              Contact Us!
+            </button>
           </li>
         </ul>
         <div className="flex items-center gap-4">

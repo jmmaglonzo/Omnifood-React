@@ -2,7 +2,7 @@ import TestimonialCard from "../UI/TestimonialCard";
 import { data, gallery } from "../data/custom-data";
 function Testimonials() {
   return (
-    <section className="mt-20 space-y-8 py-20 text-center">
+    <section className="mt-20 space-y-8 py-20 text-center" id="testimonials">
       <span className="text-base font-semibold uppercase text-primaryColor dark:text-secondaryColor md:text-xl ">
         testimonials
       </span>

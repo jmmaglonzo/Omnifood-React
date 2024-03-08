@@ -24,7 +24,7 @@ function Cta() {
       );
   };
   return (
-    <section className="container mt-20 py-20">
+    <section className="container mt-20 py-20" id="contact">
       <form ref={form} onSubmit={sendEmail}>
         <Toaster richColors position="top-right" />
         <div className="mx-auto flex flex-col justify-between overflow-hidden rounded-lg bg-primaryColor text-white dark:bg-secondaryColor lg:flex-row ">

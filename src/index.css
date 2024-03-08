@@ -7,6 +7,10 @@
   .inputs {
     @apply w-full rounded-sm px-2 py-1 text-black outline-none;
   }
+
+  body {
+    @apply min-h-screen bg-light dark:bg-backgroundColor;
+  }
 }
 
 label {
