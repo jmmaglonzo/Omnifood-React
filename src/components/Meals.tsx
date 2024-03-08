@@ -37,7 +37,7 @@ function Meals() {
   const visibleCards = isMobile ? recipes.slice(0, 4) : recipes.slice(0, 12);
   return (
     <section className="mt-24 space-y-4 py-20 text-center" id="meals">
-      <span className=" text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-xl">
+      <span className=" text-sm font-semibold uppercase text-primaryColor dark:text-secondaryColor md:text-xl">
         meals
       </span>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

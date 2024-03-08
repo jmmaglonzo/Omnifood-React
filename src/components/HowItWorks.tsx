@@ -4,7 +4,7 @@ import app3 from "../assets/app/app-screen-3.webp";
 function HowItWorks() {
   return (
     <section className="mt-20 space-y-4 py-20 " id="how">
-      <span className=" text-center text-sm font-semibold uppercase text-white dark:text-secondaryColor md:text-start md:text-xl">
+      <span className=" text-center text-sm font-semibold uppercase text-primaryColor dark:text-secondaryColor md:text-start md:text-xl">
         how it works
       </span>
       <h2 className="text-center font-bold dark:text-white md:text-start md:text-4xl">
