@@ -1,28 +1,44 @@
 import CtaImage from "../assets/cta/food.webp";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { FormEvent, useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 
 function Cta() {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: FormEvent): void => {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false); // State to track whether the form is currently submitting
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_ix17079", "template_12lxtb5", form.current, {
-        publicKey: "fJrwUrvJApSOUmizM",
-      })
-      .then(
-        () => {
-          toast.success("Email sent!");
-        },
-        (error) => {
-          toast.error("FAILED...", error.text);
+    if (isSubmitting || !form.current) {
+      // Prevent multiple submissions or if form is not available
+      return;
+    }
+
+    setIsSubmitting(true); // Set submitting flag to true
+
+    try {
+      await emailjs.sendForm(
+        "service_ix17079",
+        "template_12lxtb5",
+        form.current,
+        {
+          publicKey: "fJrwUrvJApSOUmizM",
         },
       );
+      toast.success("Email sent!");
+    } catch (error) {
+      toast.error("FAILED...");
+    } finally {
+      // Reset submitting flag after a delay
+      setTimeout(() => {
+        setIsSubmitting(false);
+      }, 10000); // Adjust the delay time as needed
+    }
   };
+
   return (
     <section className="container mt-20 py-20" id="contact">
       <form ref={form} onSubmit={sendEmail}>
@@ -73,11 +89,13 @@ function Cta() {
                 placeholder="Message"
               ></textarea>
             </div>
-            <input
+            <button
               type="submit"
-              value="Sign up Now!"
               className="block rounded-lg bg-secondaryColor py-2 font-semibold dark:bg-primaryColor md:hidden"
-            />
+              disabled={isSubmitting}
+            >
+              "Sign up Now!"
+            </button>
           </div>
 
           <div className="order-1 flex flex-col space-y-8 p-4 text-center md:order-2 lg:w-1/3 lg:text-start">
@@ -103,11 +121,13 @@ function Cta() {
                 <p>hello@omnifood.com</p>
               </div>
             </article>
-            <input
+            <button
               type="submit"
-              value="Sign up Now!"
-              className="hidden rounded-lg bg-secondaryColor py-2 font-semibold dark:bg-primaryColor md:block"
-            />
+              className="hidden cursor-pointer rounded-lg bg-secondaryColor py-2 font-semibold duration-300 active:translate-x-2 active:translate-y-2 dark:bg-primaryColor md:block"
+              disabled={isSubmitting}
+            >
+              Sign up Now!
+            </button>
           </div>
           <div className="order-3 hidden h-auto w-[350px] lg:block">
             <img src={CtaImage} alt="Food" className="h-full w-full" />
@@ -117,5 +137,4 @@ function Cta() {
     </section>
   );
 }
-
 export default Cta;
