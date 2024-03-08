@@ -1,4 +1,6 @@
 import NavBar from "../UI/NavBar";
+import Cta from "../components/Cta";
+import Feature from "../components/Feature";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import Logos from "../components/Logos";
@@ -19,6 +21,8 @@ function Homepage() {
         <Meals />
         <Testimonials />
       </main>
+      <Feature />
+      <Cta />
     </div>
   );
 }
