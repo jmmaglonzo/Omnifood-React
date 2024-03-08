@@ -17,7 +17,7 @@ function Meals() {
     if (storedRecipes) {
       setRecipes(JSON.parse(storedRecipes));
     } else {
-      const url = `https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_RECIPE_KEY}&number=12`;
+      const url = `https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_RECIPE}&number=12`;
       const getRecipes = async () => {
         try {
           const response = await fetch(url);
